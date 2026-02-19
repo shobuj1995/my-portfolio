@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Engineer - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f8f9fa 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            padding: 40px 20px;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            width: 100%;
+            align-items: start;
+        }
+
+        .left-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.08),
+                0 0 0 1px rgba(0, 0, 0, 0.04);
+            padding: 40px 36px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .left-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .left-panel:hover {
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.12),
+                0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        .profile-image-wrap {
+            flex-shrink: 0;
+        }
+
+        .image-preview {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 3px solid #e9ecef;
+            display: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-preview.show {
+            display: block;
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .profile-section h1 {
+            color: #1a202c;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .designation {
+            color: #667eea;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .summary-title {
+            color: #2d3748;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .description {
+            color: #4a5568;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-weight: 400;
+            letter-spacing: -0.2px;
+            text-align: left;
+        }
+
+        .right-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.08),
+                0 0 0 1px rgba(0, 0, 0, 0.04);
+            padding: 40px 36px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .right-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+        }
+
+        .right-panel:hover {
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.12),
+                0 0 0 1px rgba(0, 0, 0, 0.06);
+        }
+
+        .section-title {
+            color: #1a202c;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+            letter-spacing: -0.3px;
+        }
+
+        .work-item {
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .work-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .work-item h3 {
+            color: #2d3748;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .work-item .role {
+            color: #667eea;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .work-item .duration {
+            color: #718096;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .work-item p {
+            color: #4a5568;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .expertise-list {
+            list-style: none;
+        }
+
+        .expertise-list li {
+            color: #4a5568;
+            font-size: 15px;
+            padding: 10px 0;
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.5;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .expertise-list li:last-child {
+            border-bottom: none;
+        }
+
+        .expertise-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .contact-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 
+                0 8px 25px rgba(102, 126, 234, 0.4),
+                0 0 0 0 rgba(102, 126, 234, 0.5);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+
+        .contact-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .contact-button:active {
+            transform: translateY(-1px) scale(1);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .image-upload-section {
+            margin-top: 12px;
+        }
+
+        .image-upload-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #4a5568;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .image-upload-container {
+            position: relative;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .upload-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 14px 24px;
+            background: #f8f9fa;
+            border: 2px dashed #cbd5e0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #4a5568;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .upload-button:hover {
+            background: #e9ecef;
+            border-color: #667eea;
+            color: #667eea;
+        }
+
+        .upload-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 32px 40px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-text {
+            color: #718096;
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            list-style: none;
+        }
+
+        .social-links a {
+            color: #718096;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #667eea;
+        }
+
+        /* Toast Notification Styles */
+        .toast-container {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .toast {
+            background: white;
+            padding: 16px 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 300px;
+            opacity: 0;
+            transform: translateX(400px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 4px solid #667eea;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .toast.success {
+            border-left-color: #48bb78;
+        }
+
+        .toast.error {
+            border-left-color: #f56565;
+        }
+
+        .toast-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        .toast-message {
+            flex: 1;
+            color: #2d3748;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(102, 126, 234, 0.2);
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        .loading-spinner.show {
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fade In Animation */
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Image Preview Animation */
+        .image-preview {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .image-preview.show {
+            animation: imageFadeIn 0.5s ease-out;
+        }
+
+        @keyframes imageFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Work Item Hover Effects */
+        .work-item {
+            transition: all 0.3s ease;
+            padding: 16px;
+            border-radius: 8px;
+            cursor: default;
+        }
+
+        .work-item:hover {
+            background: #f8f9fa;
+            transform: translateX(4px);
+        }
+
+        /* Expertise List Item Animation */
+        .expertise-list li {
+            transition: all 0.2s ease;
+        }
+
+        .expertise-list li:hover {
+            color: #667eea;
+            padding-left: 28px;
+        }
+
+        /* Smooth Nav Link Active State */
+        .nav-links a.active {
+            color: #667eea;
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Contact Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.show .modal {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .modal-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a202c;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: #718096;
+            cursor: pointer;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: #f8f9fa;
+            color: #2d3748;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2d3748;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .nav-links {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .left-panel,
+            .right-panel {
+                padding: 32px 24px;
+            }
+
+            .profile-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile-image-wrap {
+                width: 100%;
+            }
+
+            .image-upload-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <aside class="left-panel">
+                <div class="profile-section">
+                    <div class="profile-header">
+                        <div class="profile-image-wrap">
+                            <img id="profileImage" class="image-preview" alt="Profile Preview">
+                            <div class="image-upload-section">
+                                <label class="image-upload-label">Upload Profile Image</label>
+                                <div class="image-upload-container">
+                                    <label for="imageUpload" class="upload-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        <span id="uploadText">Choose Image</span>
+                                    </label>
+                                    <input type="file" id="imageUpload" accept="image/*">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h1>Your Name</h1>
+                            <p class="designation">QA Engineer</p>
+                        </div>
+                    </div>
+                    <h2 class="summary-title">Professional Summary</h2>
+                    <p class="description">
+                        Passionate about ensuring software quality and delivering exceptional user experiences.
+                        Specialized in test automation, manual testing, and quality assurance processes.
+                        Dedicated to finding bugs before users do and improving product reliability.
+                    </p>
+                    <button class="contact-button" id="contactButton">
+                        <span>Contact Me</span>
+                    </button>
+                </div>
+            </aside>
+
+            <aside class="right-panel">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="work-item">
+                    <h3>Senior QA Engineer</h3>
+                    <p class="role">Quality Assurance Lead</p>
+                    <p class="duration">2022 – Present</p>
+                    <p>Lead QA initiatives for enterprise applications. Implemented automated testing frameworks and improved release quality by 40%.</p>
+                </div>
+                <div class="work-item">
+                    <h3>QA Engineer</h3>
+                    <p class="role">Software Tester</p>
+                    <p class="duration">2019 – 2022</p>
+                    <p>Performed manual and automated testing for web and mobile applications. Collaborated with development teams in agile sprints.</p>
+                </div>
+                <div class="work-item">
+                    <h3>Junior QA Analyst</h3>
+                    <p class="role">Test Analyst</p>
+                    <p class="duration">2017 – 2019</p>
+                    <p>Executed test cases, documented defects, and participated in UAT. Gained expertise in test planning and defect tracking.</p>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 32px;">Expertise</h2>
+                <ul class="expertise-list">
+                    <li>Test Automation (Selenium, Cypress, Playwright)</li>
+                    <li>Manual & Exploratory Testing</li>
+                    <li>API Testing (Postman, REST)</li>
+                    <li>Performance & Load Testing</li>
+                    <li>Agile/Scrum Methodologies</li>
+                    <li>Defect Tracking & Reporting</li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2026 Portfolio. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Contact Modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Get In Touch</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label class="form-label" for="contactName">Name</label>
+                    <input type="text" id="contactName" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="contactEmail">Email</label>
+                    <input type="email" id="contactEmail" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="contactMessage">Message</label>
+                    <textarea id="contactMessage" class="form-input form-textarea" required></textarea>
+                </div>
+                <button type="submit" class="contact-button" style="width: 100%;">
+                    <span>Send Message</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * Professional Portfolio Application
+         * Modern ES6+ implementation with error handling and smooth UX
+         */
+        (() => {
+            'use strict';
+
+            // Constants
+            const MAX_IMAGE_SIZE = 5 * 1024 * 1024; // 5MB
+            const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
+            const TOAST_DURATION = 3000;
+
+            // DOM Elements
+            const elements = {
+                imageUpload: document.getElementById('imageUpload'),
+                profileImage: document.getElementById('profileImage'),
+                uploadText: document.getElementById('uploadText'),
+                uploadButton: document.querySelector('.upload-button'),
+                contactButton: document.getElementById('contactButton'),
+                contactModal: document.getElementById('contactModal'),
+                closeModal: document.getElementById('closeModal'),
+                contactForm: document.getElementById('contactForm'),
+                toastContainer: document.getElementById('toastContainer'),
+                navLinks: document.querySelectorAll('.nav-links a')
+            };
+
+            /**
+             * Toast Notification System
+             */
+            class Toast {
+                static show(message, type = 'info') {
+                    const toast = document.createElement('div');
+                    toast.className = `toast ${type}`;
+                    
+                    const icon = Toast.getIcon(type);
+                    toast.innerHTML = `
+                        <svg class="toast-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            ${icon}
+                        </svg>
+                        <span class="toast-message">${message}</span>
+                    `;
+                    
+                    elements.toastContainer.appendChild(toast);
+                    
+                    // Trigger animation
+                    requestAnimationFrame(() => {
+                        toast.classList.add('show');
+                    });
+                    
+                    // Auto remove
+                    setTimeout(() => {
+                        toast.classList.remove('show');
+                        setTimeout(() => toast.remove(), 400);
+                    }, TOAST_DURATION);
+                }
+
+                static getIcon(type) {
+                    const icons = {
+                        success: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />',
+                        error: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />',
+                        info: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />'
+                    };
+                    return icons[type] || icons.info;
+                }
+            }
+
+            /**
+             * Image Upload Handler with Validation
+             */
+            class ImageUploader {
+                static validateFile(file) {
+                    if (!file) {
+                        throw new Error('No file selected');
+                    }
+
+                    if (!ALLOWED_IMAGE_TYPES.includes(file.type)) {
+                        throw new Error('Invalid file type. Please upload JPEG, PNG, or WebP images.');
+                    }
+
+                    if (file.size > MAX_IMAGE_SIZE) {
+                        throw new Error('File size too large. Maximum size is 5MB.');
+                    }
+
+                    return true;
+                }
+
+                static async handleUpload(event) {
+                    try {
+                        const file = event.target.files[0];
+                        
+                        if (!file) return;
+
+                        // Validate file
+                        this.validateFile(file);
+
+                        // Show loading state
+                        const originalText = elements.uploadText.textContent;
+                        elements.uploadText.innerHTML = '<span class="loading-spinner show"></span> Uploading...';
+                        elements.uploadButton.disabled = true;
+
+                        // Read file
+                        const reader = new FileReader();
+                        
+                        reader.onload = (e) => {
+                            elements.profileImage.src = e.target.result;
+                            elements.profileImage.classList.add('show');
+                            elements.uploadText.textContent = 'Change Image';
+                            elements.uploadButton.disabled = false;
+                            
+                            // Save to localStorage
+                            localStorage.setItem('profileImage', e.target.result);
+                            
+                            Toast.show('Profile image uploaded successfully!', 'success');
+                        };
+
+                        reader.onerror = () => {
+                            throw new Error('Failed to read file');
+                        };
+
+                        reader.readAsDataURL(file);
+
+                    } catch (error) {
+                        elements.uploadText.textContent = 'Choose Image';
+                        elements.uploadButton.disabled = false;
+                        Toast.show(error.message, 'error');
+                        console.error('Image upload error:', error);
+                    }
+                }
+
+                static loadSavedImage() {
+                    const savedImage = localStorage.getItem('profileImage');
+                    if (savedImage) {
+                        elements.profileImage.src = savedImage;
+                        elements.profileImage.classList.add('show');
+                        elements.uploadText.textContent = 'Change Image';
+                    }
+                }
+            }
+
+            /**
+             * Contact Modal Handler
+             */
+            class ContactModal {
+                static open() {
+                    elements.contactModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                static close() {
+                    elements.contactModal.classList.remove('show');
+                    document.body.style.overflow = '';
+                    elements.contactForm.reset();
+                }
+
+                static async handleSubmit(event) {
+                    event.preventDefault();
+                    
+                    const formData = {
+                        name: document.getElementById('contactName').value.trim(),
+                        email: document.getElementById('contactEmail').value.trim(),
+                        message: document.getElementById('contactMessage').value.trim()
+                    };
+
+                    // Validate
+                    if (!formData.name || !formData.email || !formData.message) {
+                        Toast.show('Please fill in all fields', 'error');
+                        return;
+                    }
+
+                    // Email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(formData.email)) {
+                        Toast.show('Please enter a valid email address', 'error');
+                        return;
+                    }
+
+                    // Simulate form submission
+                    const submitButton = event.target.querySelector('button[type="submit"]');
+                    const originalHTML = submitButton.innerHTML;
+                    submitButton.innerHTML = '<span class="loading-spinner show"></span> Sending...';
+                    submitButton.disabled = true;
+
+                    // Simulate API call
+                    setTimeout(() => {
+                        submitButton.innerHTML = originalHTML;
+                        submitButton.disabled = false;
+                        this.close();
+                        Toast.show('Thank you! Your message has been sent.', 'success');
+                        console.log('Form submitted:', formData);
+                    }, 1500);
+                }
+            }
+
+            /**
+             * Navigation Handler
+             */
+            class Navigation {
+                static init() {
+                    elements.navLinks.forEach(link => {
+                        link.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const href = link.getAttribute('href');
+                            
+                            // Remove active class from all links
+                            elements.navLinks.forEach(l => l.classList.remove('active'));
+                            
+                            // Add active class to clicked link
+                            link.classList.add('active');
+                            
+                            // Handle contact link
+                            if (href === '#contact') {
+                                ContactModal.open();
+                            } else {
+                                // Smooth scroll to section
+                                const target = document.querySelector(href);
+                                if (target) {
+                                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                            }
+                        });
+                    });
+                }
+            }
+
+            /**
+             * Smooth Scroll and Animation on Load
+             */
+            class PageAnimations {
+                static init() {
+                    // Add fade-in animation to panels
+                    const panels = document.querySelectorAll('.left-panel, .right-panel');
+                    panels.forEach((panel, index) => {
+                        panel.style.opacity = '0';
+                        panel.style.transform = 'translateY(20px)';
+                        
+                        setTimeout(() => {
+                            panel.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                            panel.style.opacity = '1';
+                            panel.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    });
+
+                    // Animate work items on scroll
+                    const observerOptions = {
+                        threshold: 0.1,
+                        rootMargin: '0px 0px -50px 0px'
+                    };
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateX(0)';
+                            }
+                        });
+                    }, observerOptions);
+
+                    document.querySelectorAll('.work-item, .expertise-list li').forEach((item, index) => {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateX(-20px)';
+                        item.style.transition = `all 0.4s ease ${index * 0.1}s`;
+                        observer.observe(item);
+                    });
+                }
+            }
+
+            /**
+             * Initialize Application
+             */
+            function init() {
+                // Image upload
+                elements.imageUpload.addEventListener('change', ImageUploader.handleUpload.bind(ImageUploader));
+                ImageUploader.loadSavedImage();
+
+                // Contact modal
+                elements.contactButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    ContactModal.open();
+                });
+
+                elements.closeModal.addEventListener('click', () => ContactModal.close());
+                elements.contactModal.addEventListener('click', (e) => {
+                    if (e.target === elements.contactModal) {
+                        ContactModal.close();
+                    }
+                });
+
+                elements.contactForm.addEventListener('submit', ContactModal.handleSubmit.bind(ContactModal));
+
+                // Close modal on Escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && elements.contactModal.classList.contains('show')) {
+                        ContactModal.close();
+                    }
+                });
+
+                // Navigation
+                Navigation.init();
+
+                // Page animations
+                PageAnimations.init();
+
+                // Welcome message
+                setTimeout(() => {
+                    Toast.show('Welcome to my portfolio!', 'info');
+                }, 1000);
+            }
+
+            // Initialize when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+        })();
+    </script>
+</body>
+</html>
