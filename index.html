@@ -1,604 +1,1016 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
-    <title>QA Engineer Portfolio | Professional Quality Assurance Specialist</title>
-    <meta name="description" content="Professional QA Engineer specializing in test automation, manual testing, and quality assurance. Experienced in Selenium, Cypress, API testing, and Agile methodologies. View my portfolio and work experience.">
-    <meta name="keywords" content="QA Engineer, Quality Assurance, Test Automation, Software Testing, Selenium, Cypress, API Testing, QA Portfolio">
-    <meta name="author" content="Your Name">
+    <title>Din Mohammad Obaydul | Senior QA Engineer & Automation Specialist</title>
+    <meta name="description" content="Senior QA Engineer and Automation Specialist with strong experience in Pytest, Playwright, Selenium, and API testing. I design reliable automation frameworks and scalable QA strategies that improve release quality and reduce regression time.">
+    <meta name="keywords" content="Din Mohammad Obaydul, QA Engineer, Senior QA, Automation, Playwright, Pytest, Selenium, Postman, API Testing, QA Portfolio">
+    <meta name="author" content="Din Mohammad Obaydul">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="QA Engineer Portfolio | Professional Quality Assurance Specialist">
-    <meta property="og:description" content="Professional QA Engineer specializing in test automation, manual testing, and quality assurance.">
+    <meta property="og:title" content="Din Mohammad Obaydul | Senior QA Engineer & Automation Specialist">
+    <meta property="og:description" content="Senior QA Engineer focused on automation, API testing, and building reliable test frameworks that enable confident releases.">
     <meta property="og:image" content="">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="QA Engineer Portfolio | Professional Quality Assurance Specialist">
-    <meta name="twitter:description" content="Professional QA Engineer specializing in test automation, manual testing, and quality assurance.">
-    
+    <meta name="twitter:title" content="Din Mohammad Obaydul | Senior QA Engineer & Automation Specialist">
+    <meta name="twitter:description" content="Senior QA Engineer focused on automation, API testing, and building reliable test frameworks that enable confident releases.">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23grad)' rx='20'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial, sans-serif'%3EQ%3C/text%3E%3C/svg%3E">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23grad)' rx='20'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial, sans-serif'%3EQ%3C/text%3E%3C/svg%3E">
-    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23grad)'/%3E%3Ctext x='50' y='65' font-size='44' font-weight='700' text-anchor='middle' fill='white' font-family='system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif'%3EDO%3C/text%3E%3C/svg%3E">
+
     <!-- Theme Color -->
-    <meta name="theme-color" content="#667eea">
-    
-    <!-- Language -->
+    <meta name="theme-color" content="#0f172a">
     <meta http-equiv="content-language" content="en">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+        :root {
+            --bg: #f5f7fb;
+            --bg-elevated: #ffffff;
+            --bg-hero: radial-gradient(circle at top left, #e0edff 0, #f5f7fb 45%, #fdfbff 100%);
+            --bg-hero-accent: linear-gradient(135deg, #6366f1, #8b5cf6);
+            --border-subtle: rgba(15, 23, 42, 0.06);
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --text-soft: #94a3b8;
+            --accent: #6366f1;
+            --accent-soft: #e0e7ff;
+            --accent-strong: #4f46e5;
+            --accent-secondary: #14b8a6;
+            --danger: #ef4444;
+            --card-radius: 22px;
+            --btn-radius: 999px;
+            --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
+            --shadow-subtle: 0 6px 20px rgba(15, 23, 42, 0.06);
+            --nav-backdrop: rgba(15, 23, 42, 0.65);
+            --transition-base: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="dark"] {
+            --bg: #020617;
+            --bg-elevated: #020617;
+            --bg-hero: radial-gradient(circle at top left, #1f2937 0, #020617 55%, #020617 100%);
+            --bg-hero-accent: radial-gradient(circle at top, #1d4ed8 0, #4f46e5 35%, #0f172a 100%);
+            --border-subtle: rgba(148, 163, 184, 0.25);
+            --text-main: #e5e7eb;
+            --text-muted: #9ca3af;
+            --text-soft: #6b7280;
+            --accent: #818cf8;
+            --accent-soft: rgba(129, 140, 248, 0.1);
+            --accent-strong: #a855f7;
+            --accent-secondary: #22c55e;
+            --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.75);
+            --shadow-subtle: 0 8px 30px rgba(0, 0, 0, 0.6);
+            --nav-backdrop: rgba(15, 23, 42, 0.9);
+        }
+
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f8f9fa 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-            margin: 0;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-            padding: 20px 40px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        nav {
-            max-width: 1600px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #4a5568;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 15px;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #667eea;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: stretch;
-            padding: 40px 32px;
-        }
-
-        .content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            max-width: 1600px;
-            width: 100%;
-            align-items: stretch;
-        }
-
-        .left-panel {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 24px;
-            box-shadow: 
-                0 20px 60px rgba(0, 0, 0, 0.08),
-                0 0 0 1px rgba(0, 0, 0, 0.04);
-            padding: 40px 36px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .left-panel::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .left-panel:hover {
-            box-shadow: 
-                0 30px 80px rgba(0, 0, 0, 0.12),
-                0 0 0 1px rgba(0, 0, 0, 0.06);
-        }
-
-        .profile-section {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-        }
-
-        .profile-header {
-            display: flex;
-            align-items: flex-start;
-            gap: 24px;
-            width: 100%;
-            margin-bottom: 24px;
-        }
-
-        .profile-image-wrap {
-            flex-shrink: 0;
-        }
-
-        .image-preview {
-            width: 120px;
-            height: 120px;
-            border-radius: 12px;
-            object-fit: cover;
-            border: 3px solid #e9ecef;
-            display: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .image-preview.show {
-            display: block;
-        }
-
-        .profile-info {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .profile-section h1 {
-            color: #1a202c;
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 4px;
-            letter-spacing: -0.5px;
-            line-height: 1.2;
-        }
-
-        .designation {
-            color: #667eea;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .summary-title {
-            color: #2d3748;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-            text-align: left;
-        }
-
-        .description {
-            color: #4a5568;
-            font-size: 15px;
-            line-height: 1.7;
-            margin-bottom: 24px;
-            font-weight: 400;
-            letter-spacing: -0.2px;
-            text-align: left;
-        }
-
-        .right-panel {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 24px;
-            box-shadow: 
-                0 20px 60px rgba(0, 0, 0, 0.08),
-                0 0 0 1px rgba(0, 0, 0, 0.04);
-            padding: 40px 36px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .right-panel::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
-        }
-
-        .right-panel:hover {
-            box-shadow: 
-                0 30px 80px rgba(0, 0, 0, 0.12),
-                0 0 0 1px rgba(0, 0, 0, 0.06);
-        }
-
-        .section-title {
-            color: #1a202c;
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e9ecef;
-            letter-spacing: -0.3px;
-        }
-
-        .work-item {
-            margin-bottom: 24px;
-            text-align: left;
-        }
-
-        .work-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .work-item h3 {
-            color: #2d3748;
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .work-item .role {
-            color: #667eea;
-            font-size: 13px;
-            font-weight: 500;
-            margin-bottom: 6px;
-        }
-
-        .work-item .duration {
-            color: #718096;
-            font-size: 12px;
-            margin-bottom: 8px;
-        }
-
-        .work-item p {
-            color: #4a5568;
-            font-size: 14px;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .expertise-list {
-            list-style: none;
-        }
-
-        .expertise-list li {
-            color: #4a5568;
-            font-size: 15px;
-            padding: 10px 0;
-            padding-left: 24px;
-            position: relative;
-            line-height: 1.5;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .expertise-list li:last-child {
-            border-bottom: none;
-        }
-
-        .expertise-list li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: 600;
-        }
-
-        .contact-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 16px 40px;
-            font-size: 15px;
-            font-weight: 600;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .contact-button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s ease, height 0.6s ease;
-        }
-
-        .contact-button:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 
-                0 8px 25px rgba(102, 126, 234, 0.4),
-                0 0 0 0 rgba(102, 126, 234, 0.5);
-            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-        }
-
-        .contact-button:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .contact-button:active {
-            transform: translateY(-1px) scale(1);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .contact-button span {
-            position: relative;
-            z-index: 1;
-        }
-
-        .image-upload-section {
-            margin-top: 12px;
-        }
-
-        .image-upload-label {
-            display: block;
-            margin-bottom: 8px;
-            color: #4a5568;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .image-upload-container {
-            position: relative;
-            width: 100%;
-            max-width: 200px;
-        }
-
-        .upload-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 100%;
-            padding: 14px 24px;
-            background: #f8f9fa;
-            border: 2px dashed #cbd5e0;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: #4a5568;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .upload-button:hover {
-            background: #e9ecef;
-            border-color: #667eea;
-            color: #667eea;
-        }
-
-        .upload-button svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        input[type="file"] {
-            display: none;
-        }
-
-        footer {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-            padding: 32px 40px;
-            margin-top: auto;
-        }
-
-        .footer-content {
-            max-width: 1600px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .footer-text {
-            color: #718096;
-            font-size: 14px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 16px;
-            list-style: none;
-        }
-
-        .social-links a {
-            color: #718096;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #667eea;
-        }
-
-        /* Toast Notification Styles */
-        .toast-container {
-            position: fixed;
-            top: 100px;
-            right: 20px;
-            z-index: 10000;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .toast {
-            background: white;
-            padding: 16px 20px;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            min-width: 300px;
-            opacity: 0;
-            transform: translateX(400px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border-left: 4px solid #667eea;
-        }
-
-        .toast.show {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .toast.success {
-            border-left-color: #48bb78;
-        }
-
-        .toast.error {
-            border-left-color: #f56565;
-        }
-
-        .toast-icon {
-            width: 24px;
-            height: 24px;
-            flex-shrink: 0;
-        }
-
-        .toast-message {
-            flex: 1;
-            color: #2d3748;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        /* Loading Spinner */
-        .loading-spinner {
-            display: none;
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(102, 126, 234, 0.2);
-            border-top-color: #667eea;
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-        }
-
-        .loading-spinner.show {
-            display: inline-block;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Smooth Scroll */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Skip Link for Accessibility */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* Skip Link */
         .skip-link {
             position: absolute;
+            left: 1rem;
             top: -40px;
-            left: 0;
-            background: #667eea;
-            color: white;
-            padding: 8px 16px;
+            padding: 0.5rem 1rem;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 999px;
             text-decoration: none;
-            z-index: 10000;
-            border-radius: 0 0 4px 0;
             font-weight: 600;
+            z-index: 10000;
+            transition: top var(--transition-base);
         }
 
         .skip-link:focus {
+            top: 1rem;
+        }
+
+        /* Layout */
+        .page-shell {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            position: sticky;
             top: 0;
+            z-index: 50;
+            backdrop-filter: blur(18px);
+            background: linear-gradient(to bottom, var(--nav-backdrop), transparent);
+            border-bottom: 1px solid var(--border-subtle);
         }
 
-        /* Enhanced Focus Styles for Accessibility */
-        *:focus {
-            outline: 2px solid #667eea;
-            outline-offset: 2px;
+        .nav-inner {
+            max-width: 1100px;
+            padding: 0.9rem 1.75rem;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
         }
 
-        button:focus,
-        a:focus,
-        input:focus,
-        textarea:focus {
-            outline: 3px solid #667eea;
-            outline-offset: 3px;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
         }
 
-        /* Remove outline for mouse users, keep for keyboard */
-        *:focus:not(:focus-visible) {
+        .brand-mark {
+            width: 32px;
+            height: 32px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.55);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-weight: 650;
+            letter-spacing: -0.03em;
+            font-size: 0.98rem;
+        }
+
+        .brand-role {
+            font-size: 0.72rem;
+            color: var(--text-soft);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+            font-size: 0.9rem;
+        }
+
+        .nav-link {
+            position: relative;
+            color: var(--text-soft);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.15rem 0;
+            transition: color var(--transition-base);
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.35rem;
+            width: 0;
+            height: 2px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #6366f1, #a855f7);
+            transition: width var(--transition-base);
+        }
+
+        .nav-link:hover {
+            color: var(--text-main);
+        }
+
+        .nav-link.active {
+            color: var(--accent);
+        }
+
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .icon-button {
+            border: 1px solid var(--border-subtle);
+            background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.08), transparent 55%);
+            color: var(--text-soft);
+            width: 34px;
+            height: 34px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+
+        .icon-button:hover {
+            color: var(--accent);
+            box-shadow: var(--shadow-subtle);
+            transform: translateY(-1px);
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .section-shell {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.75rem 4rem;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 3.5rem 1.75rem 4.5rem;
+            background: var(--bg-hero);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: -40%;
+            background: radial-gradient(circle at top, rgba(129, 140, 248, 0.18), transparent 55%);
+            opacity: 0.75;
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .hero-heading-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.25rem 0.7rem 0.25rem 0.3rem;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.75);
+            color: #e5e7eb;
+            font-size: 0.68rem;
+            letter-spacing: 0.17em;
+            text-transform: uppercase;
+            margin-bottom: 0.85rem;
+        }
+
+        [data-theme="dark"] .hero-heading-kicker {
+            background: rgba(15, 23, 42, 0.9);
+        }
+
+        .hero-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #22c55e, #10b981);
+            box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.35);
+        }
+
+        .hero-title {
+            font-size: clamp(2.1rem, 3.1vw + 1.4rem, 3rem);
+            line-height: 1.05;
+            letter-spacing: -0.06em;
+            margin-bottom: 0.9rem;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            max-width: 34rem;
+            line-height: 1.7;
+            margin-bottom: 1.75rem;
+        }
+
+        .hero-highlight {
+            color: var(--accent-secondary);
+            font-weight: 600;
+        }
+
+        .hero-meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1.5rem;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--text-soft);
+            margin-bottom: 1.9rem;
+        }
+
+        .meta-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .meta-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            border: 1px solid rgba(129, 140, 248, 0.8);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+            align-items: center;
+            margin-bottom: 1.75rem;
+        }
+
+        .btn-primary,
+        .btn-ghost {
+            border-radius: var(--btn-radius);
+            padding: 0.85rem 1.7rem;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border: 1px solid transparent;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            transition: all var(--transition-base);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            color: #ffffff;
+            background-image: linear-gradient(120deg, #4f46e5, #6366f1, #a855f7);
+            box-shadow: 0 14px 40px rgba(79, 70, 229, 0.55);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 18px 55px rgba(59, 130, 246, 0.6);
+        }
+
+        .btn-ghost {
+            background: rgba(15, 23, 42, 0.02);
+            border-color: var(--border-subtle);
+            color: var(--text-main);
+        }
+
+        [data-theme="dark"] .btn-ghost {
+            background: rgba(15, 23, 42, 0.7);
+        }
+
+        .btn-ghost:hover {
+            border-color: rgba(148, 163, 184, 0.7);
+            background: rgba(148, 163, 184, 0.07);
+            box-shadow: var(--shadow-subtle);
+            transform: translateY(-1px);
+        }
+
+        .btn-icon {
+            font-size: 1.05rem;
+        }
+
+        .hero-small-note {
+            font-size: 0.78rem;
+            color: var(--text-soft);
+        }
+
+        .hero-grid {
+            position: relative;
+            border-radius: 26px;
+            padding: 1.85rem 1.75rem 1.9rem;
+            background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.24), transparent 55%),
+                        linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.93));
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            color: #e5e7eb;
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.85);
+            overflow: hidden;
+        }
+
+        .hero-grid::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.35), transparent 55%);
+            opacity: 0.9;
+            mix-blend-mode: screen;
+            pointer-events: none;
+        }
+
+        .hero-grid-inner {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+        }
+
+        .hero-grid-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .hero-grid-title {
+            font-size: 0.8rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #cbd5f5;
+        }
+
+        .hero-grid-badge {
+            font-size: 0.7rem;
+            padding: 0.25rem 0.7rem;
+            border-radius: 999px;
+            background: rgba(22, 163, 74, 0.1);
+            color: #bbf7d0;
+            border: 1px solid rgba(34, 197, 94, 0.5);
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.9rem;
+            font-size: 0.8rem;
+        }
+
+        .metric {
+            padding: 0.65rem 0.7rem;
+            border-radius: 14px;
+            background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9));
+            border: 1px solid rgba(148, 163, 184, 0.4);
+        }
+
+        .metric-label {
+            color: #9ca3af;
+            font-size: 0.7rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .metric-value {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .metric-value span {
+            color: #a5b4fc;
+        }
+
+        .metric-sub {
+            font-size: 0.7rem;
+            color: #6b7280;
+        }
+
+        .hero-chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            font-size: 0.74rem;
+            margin-top: 0.25rem;
+        }
+
+        .chip {
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.82);
+            border: 1px dashed rgba(148, 163, 184, 0.5);
+            color: #cbd5f5;
+        }
+
+        /* Sections */
+        section {
+            padding-top: 3rem;
+        }
+
+        .section-header {
+            margin-bottom: 1.8rem;
+        }
+
+        .section-kicker {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--text-soft);
+            margin-bottom: 0.4rem;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            letter-spacing: -0.04em;
+            margin-bottom: 0.35rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            max-width: 32rem;
+        }
+
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.4fr);
+            gap: 2.25rem;
+            align-items: start;
+        }
+
+        .about-text {
+            font-size: 0.94rem;
+            line-height: 1.75;
+            color: var(--text-muted);
+        }
+
+        .about-text p + p {
+            margin-top: 0.85rem;
+        }
+
+        .about-highlight {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .about-list {
+            margin-top: 1.1rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .about-list li span {
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+
+        .about-aside {
+            border-radius: var(--card-radius);
+            background: radial-gradient(circle at top left, rgba(129, 140, 248, 0.08), transparent 55%), var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-subtle);
+            padding: 1.3rem 1.35rem 1.4rem;
+            font-size: 0.85rem;
+        }
+
+        .about-aside h3 {
+            font-size: 0.86rem;
+            text-transform: uppercase;
+            letter-spacing: 0.13em;
+            color: var(--text-soft);
+            margin-bottom: 0.6rem;
+        }
+
+        .about-pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+        }
+
+        .about-pill {
+            padding: 0.3rem 0.7rem;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent-strong);
+            font-weight: 500;
+            font-size: 0.74rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1.2rem;
+        }
+
+        .skill-card {
+            border-radius: var(--card-radius);
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            padding: 1.1rem 1.15rem 1.2rem;
+            box-shadow: var(--shadow-subtle);
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-soft);
+            border-color: rgba(129, 140, 248, 0.7);
+        }
+
+        .skill-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+        }
+
+        .badge {
+            border-radius: 999px;
+            padding: 0.23rem 0.65rem;
+            font-size: 0.72rem;
+            background: rgba(148, 163, 184, 0.08);
+            color: var(--text-soft);
+            border: 1px solid rgba(148, 163, 184, 0.28);
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.4rem;
+        }
+
+        .project-card {
+            border-radius: var(--card-radius);
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            padding: 1.2rem 1.2rem 1.25rem;
+            box-shadow: var(--shadow-subtle);
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+        }
+
+        .project-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top left, rgba(129, 140, 248, 0.12), transparent 55%);
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px) translateZ(0);
+            box-shadow: var(--shadow-soft);
+            border-color: rgba(129, 140, 248, 0.7);
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .project-title {
+            font-size: 0.98rem;
+            font-weight: 600;
+        }
+
+        .project-label {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent-strong);
+            border: 1px solid rgba(129, 140, 248, 0.5);
+        }
+
+        .project-description {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            margin-top: 0.25rem;
+        }
+
+        .tech-badge {
+            font-size: 0.72rem;
+            padding: 0.23rem 0.6rem;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.02);
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            color: var(--text-soft);
+        }
+
+        .project-footer {
+            margin-top: 0.6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.78rem;
+            color: var(--text-soft);
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.78rem;
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .project-link svg {
+            width: 15px;
+            height: 15px;
+        }
+
+        /* Experience */
+        .timeline {
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 1px solid var(--border-subtle);
+            display: grid;
+            gap: 1.55rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 0.6rem;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -1.05rem;
+            top: 0.25rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: var(--bg);
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 0 5px rgba(99, 102, 241, 0.18);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.85rem;
+        }
+
+        .timeline-role {
+            font-size: 0.98rem;
+            font-weight: 600;
+        }
+
+        .timeline-meta {
+            font-size: 0.78rem;
+            color: var(--text-soft);
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+        }
+
+        .timeline-company {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        .timeline-body {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            margin-top: 0.4rem;
+        }
+
+        .timeline-body strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .timeline-list {
+            margin: 0.5rem 0 0;
+            padding-left: 1.1rem;
+        }
+
+        .timeline-list li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .contact-card {
+            border-radius: var(--card-radius);
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            padding: 1.4rem 1.4rem 1.6rem;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .form-group {
+            margin-bottom: 0.9rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--text-main);
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.65rem 0.8rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-subtle);
+            background: rgba(15, 23, 42, 0.01);
+            color: var(--text-main);
+            font-size: 0.86rem;
+            font-family: inherit;
+            transition: border-color var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
             outline: none;
+            border-color: rgba(129, 140, 248, 0.9);
+            background: rgba(15, 23, 42, 0.01);
+            box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.8);
         }
 
-        *:focus-visible {
-            outline: 3px solid #667eea;
-            outline-offset: 3px;
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
         }
 
-        /* Screen Reader Only Class */
+        .contact-meta {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-subtle);
+            font-size: 0.8rem;
+            text-decoration: none;
+            color: var(--text-soft);
+            transition: all var(--transition-base);
+        }
+
+        .contact-link:hover {
+            border-color: rgba(129, 140, 248, 0.8);
+            color: var(--accent);
+            box-shadow: var(--shadow-subtle);
+            transform: translateY(-1px);
+        }
+
+        /* Scroll to top */
+        .scroll-top {
+            position: fixed;
+            right: 1.4rem;
+            bottom: 1.4rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 999px;
+            border: 1px solid var(--border-subtle);
+            background: radial-gradient(circle at top left, rgba(129, 140, 248, 0.25), rgba(15, 23, 42, 0.95));
+            color: #e5e7eb;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+            transition: opacity var(--transition-base), transform var(--transition-base);
+            z-index: 44;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 1.4rem 1.75rem 1.6rem;
+            font-size: 0.78rem;
+            color: var(--text-soft);
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-social a {
+            text-decoration: none;
+            color: var(--text-soft);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: color var(--transition-base);
+        }
+
+        .footer-social a:hover {
+            color: var(--accent);
+        }
+
         .sr-only {
             position: absolute;
             width: 1px;
@@ -611,706 +1023,642 @@
             border-width: 0;
         }
 
-        /* Fade In Animation */
-        .fade-in {
-            animation: fadeIn 0.6s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Image Preview Animation */
-        .image-preview {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .image-preview.show {
-            animation: imageFadeIn 0.5s ease-out;
-        }
-
-        @keyframes imageFadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        /* Work Item Hover Effects */
-        .work-item {
-            transition: all 0.3s ease;
-            padding: 16px;
-            border-radius: 8px;
-            cursor: default;
-        }
-
-        .work-item:hover {
-            background: #f8f9fa;
-            transform: translateX(4px);
-        }
-
-        /* Expertise List Item Animation */
-        .expertise-list li {
-            transition: all 0.2s ease;
-        }
-
-        .expertise-list li:hover {
-            color: #667eea;
-            padding-left: 28px;
-        }
-
-        /* Smooth Nav Link Active State */
-        .nav-links a.active {
-            color: #667eea;
-        }
-
-        .nav-links a.active::after {
-            width: 100%;
-        }
-
-        /* Contact Modal Styles */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(4px);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
+        /* Reveal Animations */
+        .reveal {
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transform: translateY(16px);
+            transition: opacity 500ms ease-out, transform 500ms ease-out;
         }
 
-        .modal-overlay.show {
-            display: flex;
+        .reveal.visible {
             opacity: 1;
+            transform: translateY(0);
         }
 
-        .modal {
-            background: white;
-            border-radius: 16px;
-            padding: 32px;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
+        /* Focus styles */
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
         }
 
-        .modal-overlay.show .modal {
-            transform: scale(1);
-        }
+        @media (max-width: 960px) {
+            .hero-inner {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 2.4rem;
+            }
 
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
-        }
+            .hero-grid {
+                order: -1;
+            }
 
-        .modal-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1a202c;
-        }
+            .about-grid,
+            .skills-grid,
+            .projects-grid,
+            .contact-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
 
-        .modal-close {
-            background: none;
-            border: none;
-            font-size: 28px;
-            color: #718096;
-            cursor: pointer;
-            padding: 0;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-        }
-
-        .modal-close:hover {
-            background: #f8f9fa;
-            color: #2d3748;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 8px;
-            color: #2d3748;
-            font-weight: 600;
-            font-size: 14px;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e9ecef;
-            border-radius: 8px;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            font-family: inherit;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        .form-textarea {
-            min-height: 120px;
-            resize: vertical;
+            .projects-grid {
+                gap: 1.1rem;
+            }
         }
 
         @media (max-width: 768px) {
-            header {
-                padding: 16px 20px;
+            .nav-inner {
+                padding-inline: 1.1rem;
             }
 
-            nav {
-                flex-direction: column;
-                gap: 16px;
+            .section-shell,
+            .hero {
+                padding-inline: 1.1rem;
             }
 
             .nav-links {
-                gap: 20px;
-                flex-wrap: wrap;
-                justify-content: center;
+                display: none;
             }
 
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
+            .hero {
+                padding-top: 2.6rem;
             }
 
-            .content-wrapper {
-                grid-template-columns: 1fr;
+            .section-shell {
+                padding-bottom: 3rem;
             }
 
-            .left-panel,
-            .right-panel {
-                padding: 32px 24px;
+            .skills-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
-            .profile-header {
-                flex-direction: column;
-                align-items: flex-start;
+            .projects-grid {
+                grid-template-columns: minmax(0, 1fr);
             }
+        }
 
-            .profile-image-wrap {
-                width: 100%;
-            }
-
-            .image-upload-container {
-                max-width: 100%;
+        @media (max-width: 480px) {
+            .skills-grid {
+                grid-template-columns: minmax(0, 1fr);
             }
         }
     </style>
 </head>
 <body>
-    <!-- Skip Link for Keyboard Navigation -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <header role="banner">
-        <nav role="navigation" aria-label="Main navigation">
-            <div class="logo" aria-label="Portfolio Home">Portfolio</div>
-            <ul class="nav-links" role="list">
-                <li role="listitem"><a href="#home" aria-label="Navigate to home section">Home</a></li>
-                <li role="listitem"><a href="#about" aria-label="Navigate to about section">About</a></li>
-                <li role="listitem"><a href="#services" aria-label="Navigate to services section">Services</a></li>
-                <li role="listitem"><a href="#contact" aria-label="Open contact form">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <a href="#main" class="skip-link">Skip to main content</a>
 
-    <main id="main-content" role="main" aria-label="Main portfolio content">
-        <div class="content-wrapper">
-            <aside class="left-panel" aria-label="Profile information">
-                <div class="profile-section">
-                    <div class="profile-header">
-                        <div class="profile-image-wrap">
-                            <img id="profileImage" class="image-preview" alt="Profile picture of QA Engineer" aria-hidden="true">
-                            <div class="image-upload-section">
-                                <label class="image-upload-label" for="imageUpload">Upload Profile Image</label>
-                                <div class="image-upload-container">
-                                    <label for="imageUpload" class="upload-button" role="button" tabindex="0" aria-label="Upload profile image">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                        <span id="uploadText">Choose Image</span>
-                                    </label>
-                                    <input type="file" id="imageUpload" accept="image/*" aria-label="Select profile image file" aria-describedby="imageUploadHelp">
-                                    <span id="imageUploadHelp" class="sr-only">Accepted formats: JPEG, PNG, WebP. Maximum file size: 5MB</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="profile-info">
-                            <h1>Your Name</h1>
-                            <p class="designation" aria-label="Job title">QA Engineer</p>
-                        </div>
+    <div class="page-shell">
+        <header>
+            <div class="nav-inner">
+                <a href="#hero" class="brand" aria-label="Back to top">
+                    <div class="brand-mark">DO</div>
+                    <div class="brand-text">
+                        <span class="brand-name">Din Mohammad Obaydul</span>
+                        <span class="brand-role">Senior QA & Automation</span>
                     </div>
-                    <section aria-labelledby="summary-heading">
-                        <h2 id="summary-heading" class="summary-title">Professional Summary</h2>
-                        <p class="description">
-                            Passionate about ensuring software quality and delivering exceptional user experiences.
-                            Specialized in test automation, manual testing, and quality assurance processes.
-                            Dedicated to finding bugs before users do and improving product reliability.
-                        </p>
-                    </section>
-                    <button class="contact-button" id="contactButton" aria-label="Open contact form to send a message">
-                        <span>Contact Me</span>
+                </a>
+
+                <nav aria-label="Primary navigation" class="nav-links" id="navLinks">
+                    <a href="#hero" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <button class="icon-button" id="themeToggle" aria-label="Toggle dark mode">
+                        <span id="themeIcon" aria-hidden="true">🌙</span>
                     </button>
                 </div>
-            </aside>
-
-            <aside class="right-panel" aria-label="Work experience and expertise">
-                <section aria-labelledby="experience-heading">
-                    <h2 id="experience-heading" class="section-title">Work Experience</h2>
-                    <article class="work-item" aria-labelledby="work-1">
-                        <h3 id="work-1">Senior QA Engineer</h3>
-                        <p class="role" aria-label="Job role">Quality Assurance Lead</p>
-                        <p class="duration" aria-label="Employment duration">2022 – Present</p>
-                        <p>Lead QA initiatives for enterprise applications. Implemented automated testing frameworks and improved release quality by 40%.</p>
-                    </article>
-                    <article class="work-item" aria-labelledby="work-2">
-                        <h3 id="work-2">QA Engineer</h3>
-                        <p class="role" aria-label="Job role">Software Tester</p>
-                        <p class="duration" aria-label="Employment duration">2019 – 2022</p>
-                        <p>Performed manual and automated testing for web and mobile applications. Collaborated with development teams in agile sprints.</p>
-                    </article>
-                    <article class="work-item" aria-labelledby="work-3">
-                        <h3 id="work-3">Junior QA Analyst</h3>
-                        <p class="role" aria-label="Job role">Test Analyst</p>
-                        <p class="duration" aria-label="Employment duration">2017 – 2019</p>
-                        <p>Executed test cases, documented defects, and participated in UAT. Gained expertise in test planning and defect tracking.</p>
-                    </article>
-                </section>
-
-                <section aria-labelledby="expertise-heading" style="margin-top: 32px;">
-                    <h2 id="expertise-heading" class="section-title">Expertise</h2>
-                    <ul class="expertise-list" role="list">
-                        <li role="listitem">Test Automation (Selenium, Cypress, Playwright)</li>
-                        <li role="listitem">Manual & Exploratory Testing</li>
-                        <li role="listitem">API Testing (Postman, REST)</li>
-                        <li role="listitem">Performance & Load Testing</li>
-                        <li role="listitem">Agile/Scrum Methodologies</li>
-                        <li role="listitem">Defect Tracking & Reporting</li>
-                    </ul>
-                </section>
-            </aside>
-        </div>
-    </main>
-
-    <footer role="contentinfo">
-        <div class="footer-content">
-            <p class="footer-text">&copy; <span id="currentYear">2026</span> Portfolio. All rights reserved.</p>
-            <nav aria-label="Social media links">
-                <ul class="social-links" role="list">
-                    <li role="listitem"><a href="#" aria-label="Visit LinkedIn profile (opens in new tab)" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                    <li role="listitem"><a href="#" aria-label="Visit GitHub profile (opens in new tab)" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li role="listitem"><a href="#" aria-label="Visit Twitter profile (opens in new tab)" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
-
-    <!-- Toast Container -->
-    <div class="toast-container" id="toastContainer" role="status" aria-live="polite" aria-atomic="true"></div>
-
-    <!-- Contact Modal -->
-    <div class="modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal">
-            <div class="modal-header">
-                <h3 id="modal-title" class="modal-title">Get In Touch</h3>
-                <button class="modal-close" id="closeModal" aria-label="Close contact form">&times;</button>
             </div>
-            <form id="contactForm" aria-label="Contact form">
-                <div class="form-group">
-                    <label class="form-label" for="contactName">Name <span aria-label="required">*</span></label>
-                    <input type="text" id="contactName" class="form-input" required aria-required="true" aria-describedby="nameError" autocomplete="name">
-                    <span id="nameError" class="sr-only" role="alert"></span>
+        </header>
+
+        <main id="main">
+            <!-- Hero -->
+            <section id="hero" class="hero">
+                <div class="hero-inner reveal">
+                    <div>
+                        <div class="hero-heading-kicker">
+                            <span class="hero-dot"></span>
+                            <span>QA Engineer · Automation Specialist</span>
+                        </div>
+                        <h1 class="hero-title">
+                            QA Engineer | Automation Specialist | <span>Quality Advocate</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            I design lean, reliable QA strategies that keep releases predictable and reduce risk.
+                            Focused on building automation that gives teams <span class="hero-highlight">fast feedback, stable builds, and confident releases</span>.
+                        </p>
+
+                        <div class="hero-meta-row">
+                            <div class="meta-pill">
+                                <span class="meta-dot"></span>
+                                <span>5+ years · QA & Automation</span>
+                            </div>
+                            <div class="meta-pill">
+                                <span class="meta-dot"></span>
+                                <span>Pytest · Playwright · Selenium · Postman</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn-primary">
+                                <span>View Projects</span>
+                                <span class="btn-icon">↘</span>
+                            </a>
+                            <a href="assets/Din-Mohammad-Obaydul-Resume.pdf" class="btn-ghost" download>
+                                <span>Download Resume</span>
+                            </a>
+                        </div>
+
+                        <p class="hero-small-note">
+                            Currently focused on building resilient test automation for modern web & API platforms.
+                        </p>
+                    </div>
+
+                    <aside class="hero-grid" aria-label="Key QA impact metrics">
+                        <div class="hero-grid-inner">
+                            <div class="hero-grid-header">
+                                <div>
+                                    <div class="hero-grid-title">Delivery impact snapshot</div>
+                                </div>
+                                <span class="hero-grid-badge">Production-ready QA</span>
+                            </div>
+                            <div class="hero-metrics">
+                                <div class="metric">
+                                    <div class="metric-label">Regression cycles</div>
+                                    <div class="metric-value"><span>40%</span> faster</div>
+                                    <div class="metric-sub">via layered UI + API automation</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Escaped defects</div>
+                                    <div class="metric-value"><span>↓ 35%</span></div>
+                                    <div class="metric-sub">through risk-based test design</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">CI reliability</div>
+                                    <div class="metric-value"><span>99%</span> green builds</div>
+                                    <div class="metric-sub">with stable, self-healing suites</div>
+                                </div>
+                            </div>
+                            <div class="hero-chip-row">
+                                <span class="chip">Pytest API suites</span>
+                                <span class="chip">Playwright UI pipelines</span>
+                                <span class="chip">Shift-left testing mindset</span>
+                                <span class="chip">CI/CD observability</span>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-                <div class="form-group">
-                    <label class="form-label" for="contactEmail">Email <span aria-label="required">*</span></label>
-                    <input type="email" id="contactEmail" class="form-input" required aria-required="true" aria-describedby="emailError" autocomplete="email">
-                    <span id="emailError" class="sr-only" role="alert"></span>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="section-shell">
+                <div class="section-header reveal">
+                    <div class="section-kicker">About</div>
+                    <h2 class="section-title">Pragmatic QA with an automation-first mindset</h2>
+                    <p class="section-subtitle">
+                        I focus on building test suites that are fast, maintainable, and directly aligned with business risk — not just test counts.
+                    </p>
                 </div>
-                <div class="form-group">
-                    <label class="form-label" for="contactMessage">Message <span aria-label="required">*</span></label>
-                    <textarea id="contactMessage" class="form-input form-textarea" required aria-required="true" aria-describedby="messageError" rows="5"></textarea>
-                    <span id="messageError" class="sr-only" role="alert"></span>
+
+                <div class="about-grid reveal">
+                    <div class="about-text">
+                        <p>
+                            I’m a <span class="about-highlight">Senior QA Engineer</span> who helps teams ship confidently by combining
+                            strong test design with robust automation. My work spans UI, API, and integration testing,
+                            with a focus on reliable pipelines and short feedback loops.
+                        </p>
+                        <p>
+                            Over the last few years I’ve designed and maintained automation frameworks using
+                            <span class="about-highlight">Pytest, Playwright, Selenium, and Postman</span>, integrated them into CI/CD,
+                            and aligned QA strategy with product priorities so that tests protect what matters most.
+                        </p>
+
+                        <ul class="about-list">
+                            <li>
+                                <span>•</span> Reduced regression cycles from days to hours by moving critical flows to stable API-level suites.
+                            </li>
+                            <li>
+                                <span>•</span> Built reusable test libraries that cut duplicate automation effort and simplified onboarding.
+                            </li>
+                            <li>
+                                <span>•</span> Partnered with dev and product to embed quality checks early in the lifecycle.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <aside class="about-aside" aria-label="Quick profile snapshot">
+                        <h3>Snapshot</h3>
+                        <div class="about-pill-row">
+                            <span class="about-pill">5+ years in QA & testing</span>
+                            <span class="about-pill">UI & API automation</span>
+                            <span class="about-pill">Python · Java · JavaScript</span>
+                            <span class="about-pill">Agile / Scrum environments</span>
+                        </div>
+                    </aside>
                 </div>
-                <button type="submit" class="contact-button" style="width: 100%;" aria-label="Submit contact form">
-                    <span>Send Message</span>
-                </button>
-            </form>
-        </div>
+            </section>
+
+            <!-- Skills -->
+            <section id="skills" class="section-shell">
+                <div class="section-header reveal">
+                    <div class="section-kicker">Skills</div>
+                    <h2 class="section-title">Technical toolkit for modern QA</h2>
+                    <p class="section-subtitle">
+                        A focused stack for building maintainable automation, validating APIs, and keeping CI pipelines reliable.
+                    </p>
+                </div>
+
+                <div class="skills-grid reveal">
+                    <article class="skill-card" aria-label="Automation skills">
+                        <h3 class="skill-title">Automation</h3>
+                        <div class="skill-tags">
+                            <span class="badge">Playwright</span>
+                            <span class="badge">Selenium / WebDriver</span>
+                            <span class="badge">Cypress (familiar)</span>
+                            <span class="badge">Pytest</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card" aria-label="API testing skills">
+                        <h3 class="skill-title">API Testing</h3>
+                        <div class="skill-tags">
+                            <span class="badge">Pytest + requests</span>
+                            <span class="badge">Postman collections</span>
+                            <span class="badge">REST / JSON</span>
+                            <span class="badge">Contract testing mindset</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card" aria-label="Tools">
+                        <h3 class="skill-title">Tools & Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="badge">Git & GitHub</span>
+                            <span class="badge">Jira / Azure DevOps</span>
+                            <span class="badge">Allure / HTML reporting</span>
+                            <span class="badge">Browser devtools</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card" aria-label="CI/CD and quality">
+                        <h3 class="skill-title">CI/CD & Quality</h3>
+                        <div class="skill-tags">
+                            <span class="badge">GitHub Actions</span>
+                            <span class="badge">Pipeline gating</span>
+                            <span class="badge">Test flakiness control</span>
+                            <span class="badge">PR-level checks</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects" class="section-shell">
+                <div class="section-header reveal">
+                    <div class="section-kicker">Projects</div>
+                    <h2 class="section-title">Selected QA & automation projects</h2>
+                    <p class="section-subtitle">
+                        A sample of frameworks and suites I’ve built to validate APIs, critical UI paths, and end-to-end flows.
+                    </p>
+                </div>
+
+                <div class="projects-grid reveal">
+                    <article class="project-card" aria-labelledby="proj-pytest">
+                        <div class="project-header">
+                            <h3 id="proj-pytest" class="project-title">Pytest API Automation Framework</h3>
+                            <span class="project-label">API · Backend</span>
+                        </div>
+                        <p class="project-description">
+                            Lightweight Pytest-based framework for REST APIs with layered fixtures, environment profiles,
+                            and clear separation of test data, HTTP clients, and assertions.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Pytest</span>
+                            <span class="tech-badge">requests</span>
+                            <span class="tech-badge">Allure / HTML reports</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>Focus: fast, stable regression at API layer</span>
+                            <a href="https://github.com/shobuj1995" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View API automation work on GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7m0 0v7m0-7L10 14" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 5l-2 2v12a2 2 0 002 2h12l2-2" />
+                                </svg>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" aria-labelledby="proj-playwright">
+                        <div class="project-header">
+                            <h3 id="proj-playwright" class="project-title">Playwright UI Automation Suite</h3>
+                            <span class="project-label">Web UI</span>
+                        </div>
+                        <p class="project-description">
+                            Playwright-based UI suite covering high-value user journeys with page object models,
+                            test tagging, and parallel execution integrated into CI.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Playwright</span>
+                            <span class="tech-badge">TypeScript / JavaScript</span>
+                            <span class="tech-badge">GitHub Actions</span>
+                            <span class="tech-badge">Visual regression (select flows)</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>Focus: resilient, low-flake UI coverage</span>
+                            <a href="https://github.com/shobuj1995" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View UI automation work on GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7m0 0v7m0-7L10 14" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 5l-2 2v12a2 2 0 002 2h12l2-2" />
+                                </svg>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" aria-labelledby="proj-banking">
+                        <div class="project-header">
+                            <h3 id="proj-banking" class="project-title">End-to-End Banking App Test Suite</h3>
+                            <span class="project-label">E2E</span>
+                        </div>
+                        <p class="project-description">
+                            Hybrid UI + API regression pack for a demo banking application (login, payments, transfers),
+                            using data-driven tests and environment-aware configuration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Selenium / WebDriver</span>
+                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">JUnit / TestNG</span>
+                            <span class="tech-badge">CI integration</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>Focus: critical path validation before release</span>
+                            <a href="https://github.com/shobuj1995" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View banking automation work on GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7m0 0v7m0-7L10 14" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 5l-2 2v12a2 2 0 002 2h12l2-2" />
+                                </svg>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section id="experience" class="section-shell">
+                <div class="section-header reveal">
+                    <div class="section-kicker">Experience</div>
+                    <h2 class="section-title">Delivering stable releases with measurable impact</h2>
+                    <p class="section-subtitle">
+                        Roles focused on building automation, tightening feedback loops, and partnering with dev teams to make quality a shared responsibility.
+                    </p>
+                </div>
+
+                <div class="timeline reveal" aria-label="Work experience timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <header class="timeline-header">
+                            <h3 class="timeline-role">Senior QA Engineer</h3>
+                            <span class="timeline-meta">2022 – Present</span>
+                        </header>
+                        <div class="timeline-company">Product teams · Web & API platforms</div>
+                        <div class="timeline-body">
+                            <ul class="timeline-list">
+                                <li>Introduced layered UI + API automation which <strong>reduced regression time by 40%</strong> and cut build feedback cycles from days to hours.</li>
+                                <li>Designed stable Playwright and Pytest suites that <strong>lowered flaky test incidents</strong> and kept CI builds consistently green.</li>
+                                <li>Partnered with engineering leads to define risk-based test strategy and align coverage with release-critical areas.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <header class="timeline-header">
+                            <h3 class="timeline-role">QA Engineer</h3>
+                            <span class="timeline-meta">2019 – 2022</span>
+                        </header>
+                        <div class="timeline-company">Agile squads · Web & mobile products</div>
+                        <div class="timeline-body">
+                            <ul class="timeline-list">
+                                <li>Owned functional, regression, and integration testing for multiple releases, helping teams maintain a <strong>consistent release cadence</strong>.</li>
+                                <li>Automated high-value regression flows in UI and API layers, freeing time for exploratory and risk-based testing.</li>
+                                <li>Collaborated closely with developers to reproduce complex defects and improve root-cause visibility.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <header class="timeline-header">
+                            <h3 class="timeline-role">Junior QA Analyst</h3>
+                            <span class="timeline-meta">2017 – 2019</span>
+                        </header>
+                        <div class="timeline-company">Cross-functional teams · Web products</div>
+                        <div class="timeline-body">
+                            <ul class="timeline-list">
+                                <li>Executed test plans, logged issues with clear reproduction steps, and supported UAT with stakeholders.</li>
+                                <li>Learned core automation concepts and contributed to extending existing test suites with well-scoped scenarios.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="section-shell">
+                <div class="section-header reveal">
+                    <div class="section-kicker">Contact</div>
+                    <h2 class="section-title">Let’s talk about quality</h2>
+                    <p class="section-subtitle">
+                        Open to QA engineering and automation-focused roles where test strategy, frameworks, and collaboration matter.
+                    </p>
+                </div>
+
+                <div class="contact-grid reveal">
+                    <div class="contact-card" aria-label="Contact form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input id="name" name="name" class="form-input" type="text" autocomplete="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input id="email" name="email" class="form-input" type="email" autocomplete="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="form-textarea" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
+                                <span>Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <p class="contact-meta">
+                            Best way to reach me is via LinkedIn or email. I’m happy to walk through frameworks,
+                            test strategies, or example suites in more detail.
+                        </p>
+                        <div class="contact-links">
+                            <a class="contact-link" href="https://www.linkedin.com/in/obaydul051/" target="_blank" rel="noopener noreferrer">
+                                <span aria-hidden="true">🔗</span>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a class="contact-link" href="https://github.com/shobuj1995" target="_blank" rel="noopener noreferrer">
+                                <span aria-hidden="true">🐙</span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-inner">
+                <span>© <span id="year"></span> Din Mohammad Obaydul. All rights reserved.</span>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/obaydul051/" target="_blank" rel="noopener noreferrer">
+                        <span aria-hidden="true">🔗</span>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/shobuj1995" target="_blank" rel="noopener noreferrer">
+                        <span aria-hidden="true">🐙</span>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <button class="scroll-top" id="scrollTop" aria-label="Scroll back to top">
+            ↑
+        </button>
     </div>
 
     <script>
-        /**
-         * Professional Portfolio Application
-         * Modern ES6+ implementation with error handling and smooth UX
-         */
-        (() => {
-            'use strict';
+        (function () {
+            const html = document.documentElement;
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section[id]');
+            const scrollTopBtn = document.getElementById('scrollTop');
+            const contactForm = document.getElementById('contactForm');
+            const yearEl = document.getElementById('year');
 
-            // Constants
-            const MAX_IMAGE_SIZE = 5 * 1024 * 1024; // 5MB
-            const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
-            const TOAST_DURATION = 3000;
-
-            // DOM Elements
-            const elements = {
-                imageUpload: document.getElementById('imageUpload'),
-                profileImage: document.getElementById('profileImage'),
-                uploadText: document.getElementById('uploadText'),
-                uploadButton: document.querySelector('.upload-button'),
-                contactButton: document.getElementById('contactButton'),
-                contactModal: document.getElementById('contactModal'),
-                closeModal: document.getElementById('closeModal'),
-                contactForm: document.getElementById('contactForm'),
-                toastContainer: document.getElementById('toastContainer'),
-                navLinks: document.querySelectorAll('.nav-links a')
-            };
-
-            /**
-             * Toast Notification System
-             */
-            class Toast {
-                static show(message, type = 'info') {
-                    const toast = document.createElement('div');
-                    toast.className = `toast ${type}`;
-                    toast.setAttribute('role', type === 'error' ? 'alert' : 'status');
-                    toast.setAttribute('aria-live', type === 'error' ? 'assertive' : 'polite');
-                    toast.setAttribute('aria-atomic', 'true');
-                    
-                    const icon = Toast.getIcon(type);
-                    toast.innerHTML = `
-                        <svg class="toast-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            ${icon}
-                        </svg>
-                        <span class="toast-message">${message}</span>
-                    `;
-                    
-                    elements.toastContainer.appendChild(toast);
-                    
-                    // Trigger animation
-                    requestAnimationFrame(() => {
-                        toast.classList.add('show');
-                    });
-                    
-                    // Auto remove
-                    setTimeout(() => {
-                        toast.classList.remove('show');
-                        setTimeout(() => toast.remove(), 400);
-                    }, TOAST_DURATION);
-                }
-
-                static getIcon(type) {
-                    const icons = {
-                        success: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />',
-                        error: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />',
-                        info: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />'
-                    };
-                    return icons[type] || icons.info;
-                }
+            // Year in footer
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
             }
 
-            /**
-             * Image Upload Handler with Validation
-             */
-            class ImageUploader {
-                static validateFile(file) {
-                    if (!file) {
-                        throw new Error('No file selected');
-                    }
-
-                    if (!ALLOWED_IMAGE_TYPES.includes(file.type)) {
-                        throw new Error('Invalid file type. Please upload JPEG, PNG, or WebP images.');
-                    }
-
-                    if (file.size > MAX_IMAGE_SIZE) {
-                        throw new Error('File size too large. Maximum size is 5MB.');
-                    }
-
-                    return true;
-                }
-
-                static async handleUpload(event) {
-                    try {
-                        const file = event.target.files[0];
-                        
-                        if (!file) return;
-
-                        // Validate file
-                        this.validateFile(file);
-
-                        // Show loading state
-                        const originalText = elements.uploadText.textContent;
-                        elements.uploadText.innerHTML = '<span class="loading-spinner show"></span> Uploading...';
-                        elements.uploadButton.disabled = true;
-
-                        // Read file
-                        const reader = new FileReader();
-                        
-                        reader.onload = (e) => {
-                            elements.profileImage.src = e.target.result;
-                            elements.profileImage.classList.add('show');
-                            elements.uploadText.textContent = 'Change Image';
-                            elements.uploadButton.disabled = false;
-                            
-                            // Save to localStorage
-                            localStorage.setItem('profileImage', e.target.result);
-                            
-                            Toast.show('Profile image uploaded successfully!', 'success');
-                        };
-
-                        reader.onerror = () => {
-                            throw new Error('Failed to read file');
-                        };
-
-                        reader.readAsDataURL(file);
-
-                    } catch (error) {
-                        elements.uploadText.textContent = 'Choose Image';
-                        elements.uploadButton.disabled = false;
-                        Toast.show(error.message, 'error');
-                        console.error('Image upload error:', error);
-                    }
-                }
-
-                static loadSavedImage() {
-                    const savedImage = localStorage.getItem('profileImage');
-                    if (savedImage) {
-                        elements.profileImage.src = savedImage;
-                        elements.profileImage.classList.add('show');
-                        elements.uploadText.textContent = 'Change Image';
-                    }
-                }
+            // Theme handling
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️';
+            } else {
+                html.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '🌙';
             }
 
-            /**
-             * Contact Modal Handler
-             */
-            class ContactModal {
-                static open() {
-                    elements.contactModal.classList.add('show');
-                    elements.contactModal.setAttribute('aria-hidden', 'false');
-                    document.body.style.overflow = 'hidden';
-                    // Focus first input
-                    setTimeout(() => {
-                        document.getElementById('contactName').focus();
-                    }, 100);
-                }
+            themeToggle.addEventListener('click', () => {
+                const current = html.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                themeIcon.textContent = next === 'dark' ? '☀️' : '🌙';
+            });
 
-                static close() {
-                    elements.contactModal.classList.remove('show');
-                    elements.contactModal.setAttribute('aria-hidden', 'true');
-                    document.body.style.overflow = '';
-                    elements.contactForm.reset();
-                    // Return focus to contact button
-                    elements.contactButton.focus();
-                }
-
-                static async handleSubmit(event) {
-                    event.preventDefault();
-                    
-                    const formData = {
-                        name: document.getElementById('contactName').value.trim(),
-                        email: document.getElementById('contactEmail').value.trim(),
-                        message: document.getElementById('contactMessage').value.trim()
-                    };
-
-                    // Validate
-                    if (!formData.name || !formData.email || !formData.message) {
-                        Toast.show('Please fill in all fields', 'error');
-                        return;
+            // Smooth scroll for nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const id = link.getAttribute('href');
+                    const target = document.querySelector(id);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
+                });
+            });
 
-                    // Email validation
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(formData.email)) {
-                        Toast.show('Please enter a valid email address', 'error');
-                        return;
-                    }
-
-                    // Simulate form submission
-                    const submitButton = event.target.querySelector('button[type="submit"]');
-                    const originalHTML = submitButton.innerHTML;
-                    submitButton.innerHTML = '<span class="loading-spinner show"></span> Sending...';
-                    submitButton.disabled = true;
-
-                    // Simulate API call
-                    setTimeout(() => {
-                        submitButton.innerHTML = originalHTML;
-                        submitButton.disabled = false;
-                        this.close();
-                        Toast.show('Thank you! Your message has been sent.', 'success');
-                        console.log('Form submitted:', formData);
-                    }, 1500);
-                }
-            }
-
-            /**
-             * Navigation Handler
-             */
-            class Navigation {
-                static init() {
-                    elements.navLinks.forEach(link => {
-                        link.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            const href = link.getAttribute('href');
-                            
-                            // Remove active class from all links
-                            elements.navLinks.forEach(l => l.classList.remove('active'));
-                            
-                            // Add active class to clicked link
-                            link.classList.add('active');
-                            
-                            // Handle contact link
-                            if (href === '#contact') {
-                                ContactModal.open();
-                            } else {
-                                // Smooth scroll to section
-                                const target = document.querySelector(href);
-                                if (target) {
-                                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                }
-                            }
-                        });
-                    });
-                }
-            }
-
-            /**
-             * Smooth Scroll and Animation on Load
-             */
-            class PageAnimations {
-                static init() {
-                    // Add fade-in animation to panels
-                    const panels = document.querySelectorAll('.left-panel, .right-panel');
-                    panels.forEach((panel, index) => {
-                        panel.style.opacity = '0';
-                        panel.style.transform = 'translateY(20px)';
-                        
-                        setTimeout(() => {
-                            panel.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-                            panel.style.opacity = '1';
-                            panel.style.transform = 'translateY(0)';
-                        }, index * 100);
-                    });
-
-                    // Animate work items on scroll
-                    const observerOptions = {
-                        threshold: 0.1,
-                        rootMargin: '0px 0px -50px 0px'
-                    };
-
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                entry.target.style.opacity = '1';
-                                entry.target.style.transform = 'translateX(0)';
-                            }
-                        });
-                    }, observerOptions);
-
-                    document.querySelectorAll('.work-item, .expertise-list li').forEach((item, index) => {
-                        item.style.opacity = '0';
-                        item.style.transform = 'translateX(-20px)';
-                        item.style.transition = `all 0.4s ease ${index * 0.1}s`;
-                        observer.observe(item);
-                    });
-                }
-            }
-
-            /**
-             * Initialize Application
-             */
-            function init() {
-                // Update current year
-                const yearElement = document.getElementById('currentYear');
-                if (yearElement) {
-                    yearElement.textContent = new Date().getFullYear();
-                }
-
-                // Image upload
-                elements.imageUpload.addEventListener('change', ImageUploader.handleUpload.bind(ImageUploader));
-                ImageUploader.loadSavedImage();
-
-                // Keyboard support for upload button label
-                const uploadLabel = document.querySelector('label[for="imageUpload"]');
-                if (uploadLabel) {
-                    uploadLabel.addEventListener('keydown', (e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault();
-                            elements.imageUpload.click();
+            // Active nav link on scroll
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const id = entry.target.id;
+                            navLinks.forEach(link => {
+                                link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                            });
                         }
                     });
+                },
+                {
+                    threshold: 0.5
+                }
+            );
+
+            sections.forEach(section => observer.observe(section));
+
+            // Reveal animations
+            const revealEls = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver(
+                (entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    threshold: 0.2
+                }
+            );
+
+            revealEls.forEach(el => revealObserver.observe(el));
+
+            // Scroll top button
+            window.addEventListener('scroll', () => {
+                const y = window.scrollY || document.documentElement.scrollTop;
+                if (y > 480) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
+                }
+            });
+
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Simple contact form handling (front-end only)
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                const name = formData.get('name')?.toString().trim();
+                const email = formData.get('email')?.toString().trim();
+                const message = formData.get('message')?.toString().trim();
+
+                if (!name || !email || !message) {
+                    alert('Please fill in all fields before submitting.');
+                    return;
                 }
 
-                // Contact modal
-                elements.contactButton.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    ContactModal.open();
-                });
+                // Basic email check
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
 
-                elements.closeModal.addEventListener('click', () => ContactModal.close());
-                elements.contactModal.addEventListener('click', (e) => {
-                    if (e.target === elements.contactModal) {
-                        ContactModal.close();
-                    }
-                });
-
-                elements.contactForm.addEventListener('submit', ContactModal.handleSubmit.bind(ContactModal));
-
-                // Close modal on Escape key
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape' && elements.contactModal.classList.contains('show')) {
-                        ContactModal.close();
-                    }
-                });
-
-                // Navigation
-                Navigation.init();
-
-                // Page animations
-                PageAnimations.init();
-
-                // Welcome message
-                setTimeout(() => {
-                    Toast.show('Welcome to my portfolio!', 'info');
-                }, 1000);
-            }
-
-            // Initialize when DOM is ready
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', init);
-            } else {
-                init();
-            }
+                // Simulate send and reset
+                alert('Thank you for reaching out. I will get back to you shortly.');
+                contactForm.reset();
+            });
         })();
     </script>
 </body>
